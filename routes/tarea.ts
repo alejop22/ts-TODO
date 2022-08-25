@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { getTareas, postTarea, deleteTarea } from '../controller/tareas';
+import { applyServerHardening } from '../middlewares/cargarTareas';
 
 const router = Router();
 

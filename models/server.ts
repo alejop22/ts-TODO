@@ -1,4 +1,4 @@
-import express, {Application} from 'express';
+import express, { Application } from 'express';
 import cors from 'cors';
 
 import Tarea from '../routes/tarea';
@@ -38,6 +38,7 @@ class Server {
     routes() {
         this.app.use(this.tareasPath, Tarea);
     }
+    
 }
 
 export default Server;
