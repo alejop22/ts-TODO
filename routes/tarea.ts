@@ -1,11 +1,13 @@
 import { Router } from 'express';
-import { getTareas, postTarea, deleteTarea } from '../controller/tareas';
-import { applyServerHardening } from '../middlewares/cargarTareas';
+
+
+import { getTareas, postTarea, terminarTarea, getTareasCompletadas } from '../controller/tareas';
 
 const router = Router();
 
 router.get('/', getTareas);
+router.get('/completo', getTareasCompletadas);
 router.post('/', postTarea);
-router.delete('/', deleteTarea);
+router.put('/:id', terminarTarea);
 
 export default router;

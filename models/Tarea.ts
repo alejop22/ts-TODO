@@ -1,9 +1,9 @@
 import { v4 } from 'uuid';
 
 class Tarea {
-    private id: string;
+    public id: string;
     private title: string;
-    private isCompleted: boolean;
+    public isCompleted: boolean;
 
     constructor(title: string) {
         this.id = v4();
